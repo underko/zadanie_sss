@@ -33,7 +33,7 @@ char **anagram(char *word, char **list, int list_size, int *size) {
 
 			/*kontrola po znaku*/
 			while (list[i][j] != '\n') {
-				/*ak > 0 znak je v originalnom slove*/
+				/*ak > 0 tak znak je v originalnom slove*/
 				if (word_letters[(int)list[i][j]] > 0)
 					word_letters[(int)list[i][j]]--;
 				else /*ak nie tak tam bud nie je alebo sa nachadza menej krat ako v prave skusanom slove, ide sa na dalsie slovo*/
