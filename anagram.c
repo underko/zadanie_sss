@@ -21,7 +21,7 @@ char **anagram(char *word, char **list, int list_size, int *size) {
 	while (word[i] != '\0')
 		word_letters_origin[(int)word[i++]]++;
 
-	/*kopirovanie obsahu z orignalu do zalozneho s ktorym budem pracovat*/
+	/*kopirovanie obsahu z orignalu do zalozneho pola s ktorym budem pracovat*/
 	memcpy(word_letters, word_letters_origin, SIZE * sizeof(int));
 
 	i = 0;
@@ -59,7 +59,7 @@ char **anagram(char *word, char **list, int list_size, int *size) {
 			}
 		}
 
-		/*reset a opakovanie s dalsim slovom*/
+		/*reset hodnot a opakovanie s dalsim slovom*/
 		i++; j = 0; list_size--;
 		memcpy(word_letters, word_letters_origin, SIZE * sizeof(int));
 	}
